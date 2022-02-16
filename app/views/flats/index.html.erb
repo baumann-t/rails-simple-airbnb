@@ -1,10 +1,14 @@
 <div class="grid_container">
   <% @flats.each do |flat| %>
-    <div class="card" style="width: 350px;">
+    <div class="card" style="width: 400px;">
       <div class="card-body d-flex flex-column">
         <h3 class="card-title"><%= flat.name %></h3>
         <p class="card-text"><strong>Descritpion</strong>: <%= flat.description %></p>
-        <%= link_to "Learn more!", flat_path(flat), class:"btn btn-primary mt-auto" %>
+        <div class="list-inline ">
+          <%= link_to "Learn more!", flat_path(flat), class:"list-inline-item btn btn-primary m-1" %>
+          <%= link_to "Edit flat!", edit_flat_path(flat), class:"list-inline-item btn btn-primary m-1" %>
+          <%= link_to "Delete flat!", flat_path(flat), method: :delete, class:"list-inline-item btn btn-primary m-1" %>
+        </div>
       </div>
     </div>
   <% end %>
