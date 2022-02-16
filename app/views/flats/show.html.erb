@@ -1,0 +1,12 @@
+<div class="d-flex">
+  <img src="https://source.unsplash.com/random" style="width:250px; height: 250px" class="img-thumbnail m-4">
+  <div class="card m-4" style="width: 800px">
+    <h5 class="card-header"><%= @flat.name %></h5>
+    <div class="card-body">
+      <h5 class="card-title"><%= @flat.description %></h5>
+      <p class="card-text"><strong>Price per night: </strong><%= @flat.price_per_night %></p>
+      <p class="card-text"><strong>Max number of guests: </strong><%= @flat.number_of_guests %></p>
+      <a href="#" class="btn btn-primary">Book Now!</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="shadow p-4 bg-white rounded" style="width: 700px; margin:auto">
+  <h3 >Add a new flat to the platform:</h3>
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :price_per_night %>
+    <%= f.input :number_of_guests %>
+    <%= f.button :submit, class:"btn btn-primary my-2"%>
+  <% end %>
+</div>
